@@ -25,18 +25,13 @@ providing insights into the regulatory dynamics of cancer progression.
 Based on the practical, and attractor analysis;
 
 ## 1. Which mutation is most dangerous and why?
-In this boolean model Mutations A, B, and C are equally the most dangerous whereas Mutation D is the least dangerous.
-All three mutations had a basin of attraction as 256 / 256 initial states. Which indicates a 100% cancer-like growth. 
-In all scenarios (Healthy/Stressed/Oncogene) mutations A, B and C hijacked all end with Growth=1, Death=0. 
+In this boolean model Mutations D is the most dangerous whereas  A, B, and C are the least dangerous.
 
-Because A, B, and C each drive every possible initial condition (256/256) into a cancer-like attractor and 
-suppress apoptosis across all scenarios, they are equally most dangerous in this model. However, on biological 
-grounds, p53 loss (Mutation A) is often considered the most fundamental because it removes a central
-tumor-suppressor checkpoint. But the quantitative model outputs do not distinguish A from B or C in severity. 
+All three of the mutations A, B, and C result in 256 / 256 initial states converging into cancer-like attractors.
+This means they consistently drive the system into uncontrolled proliferation with Growth=1 and Death=0.
+Although this is clearly dangerous from an oncogenic perspective, the cells remain viable and dividing.
 
-While all three mutations being equally dangerous might look infeasable, it could be plausible in a p53-centric 
-Boolean model, because p53 loss, MYC amplification, and MDM2 overexpression can all collapse the same checkpoint and 
-funnel the network into the same proliferative attractor.
+In contrast, Mutation D (CDK2 knockout) produces no cancer-like attractors at all. Instead, it drives nearly half of the system (120/256 states, 46.9%) into apoptosis, while the rest end up in quiescent or unresolved non-proliferative states. This indicates a large-scale loss of cells, which at the tissue or organismal level can be highly damaging, since excessive apoptosis or growth arrest can compromise organ function more directly than the persistence of abnormal, but still proliferating, cells.
 
 ## 2. Explain the role of feedback loops (e.g., MYC → MDM2 → p53)
 
