@@ -34,6 +34,10 @@ suppress apoptosis across all scenarios, they are equally most dangerous in this
 grounds, p53 loss (Mutation A) is often considered the most fundamental because it removes a central
 tumor-suppressor checkpoint. But the quantitative model outputs do not distinguish A from B or C in severity. 
 
+While all three mutations being equally dangerous might look infeasable, it could be plausible in a p53-centric 
+Boolean model, because p53 loss, MYC amplification, and MDM2 overexpression can all collapse the same checkpoint and 
+funnel the network into the same proliferative attractor.
+
 ## 2. Explain the role of feedback loops (e.g., MYC → MDM2 → p53)
 
 The core feedback loop in the wild-type network is MYC → MDM2 ⊣ p53 → p21 ⊣ MYC, which overall forms a positive
