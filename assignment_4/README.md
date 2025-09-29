@@ -123,20 +123,9 @@ The cellHouseKeeping function simulates the 'housekeeping' functions for a cell.
 ### 3. Network Analysis & Completion
 **Objective**: Compare code implementation with conceptual network diagram
 
-**Instructions**:
-- [ ] Examine the **cell-to-cell transport** code section
-- [ ] Examine the **cell dynamics** code section  
-- [ ] Compare the equations in the code to the provided network sketch
-- [ ] Identify missing information in the sketch
-- [ ] Complete the network diagram
+<img src="image-6.png" alt="diagram" style="width: 400px;">
 
-**Deliverables**:
-- [ ] Updated network sketch (complete diagram)
-- [ ] Documentation of missing elements identified
-- [ ] Comparison between code equations and network representation
-
-**Reference Image**: 
-![Network Sketch](image.png)
+ill add a short desription later 
 
 ---
 
