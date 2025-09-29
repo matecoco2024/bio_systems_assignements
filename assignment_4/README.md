@@ -46,13 +46,13 @@ This assignment focuses on modeling **pathogen infection dynamics** in plant tis
 
 **Guiding Questions**:
 - What is happening during the simulation?
-the auxin of the cells next to the pathogen is lowering, and the pathogen is incresing in size, meaning that that thing is reducing cell wall stiffness and expanding into compromised areas
+The auxin concentration of the cells next to the pathogen is lowering, and the pathogen is increasing in size. This is because the chemical the pathogen secretes is reducing cell wall stiffness of the surrounding cells, therefore allowing it to grow and expand further into compromised areas.
 - How does the pathogen spread?
-it increases by size, almost adopting a circle shape, by secreting chemicals that weaken neighbouring cell walls 
+It increases in size, almost adopting a circle-like shape. It does this by secreting chemicals that weaken neighbouring cell walls, reducing the wall tension, giving the pathogen more space to grow without pushback from neighbouring cells. The weakening of the cell walls also makes diffusion easier, allowing the chemical to spread easily to new cells.
 - What changes do you observe in the plant tissue?
-it goes brown instead of green, meaninig that auxin levels lower, and the wall structure gets altered since it's stiffness decreases
+It goes brown instead of green, meaninig that auxin saturation lowers since it gets mixed with the pathogen chemical, and the wall structure gets altered since it's stiffness decreases. It looks like the pathogen is pushing into the plant cells.
 - How does the infection pattern evolve over time?
-the pathogen just increases in size by sucking the auxin of the neighbouring cells and altering the wall structure, the infection then spreads towards more adjacent cells and the infection just grows.
+The pathogen increases in size by weakining the cells walls of neighbouring cells and alters their shape by pushing into them. The infection then spreads towards more adjacent cells and the cycle continues.
 ---
 
 ### 2. Code Analysis: CellHouseKeeping Section
@@ -102,13 +102,21 @@ void Assignment::CellHouseKeeping(CellBase *c) {
 
 - [ ] Write a detailed description of what this code section does
 
-1) settign a default cell length (25) for wall elements that haven't been initialized
+The cellHouseKeeping function simulates the 'housekeeping' functions for a cell. It has 3 main functions.
 
-2) first we calculate pathogen chemical level, patho_chem_level = c->Chemical(0) / (0.5) and we cap that level at 1.2
+1) Cell behavior rules:
+   For cell type 2 there is a specific rule added, which states that the traget area should be increased by 2, simulating fast growth. Cell type 2 refers to the pathogen, for the normal cells this rule is therfore not applied.
 
-3) when the pathogen chemical levels surpasses a level (0.1), the wall stifness of the neightbouring cells decrease (2.5 - chemical_level), making them less stiff and altering their structure AND removes cell division restrictions (SetCellVeto(false))
+2) Initial cell length setup:
+   The function sets the wall lenght to 25, if the wall length is undefinded. It does this for each wall element of a cell, to ensure that all elements are initialed properly.
 
-4) for the unnafected cells, they remain at default stiffness level (2.5 )
+3) Cell wall weakening:
+   The function first reads the concentration of the pathogen chemical in the cell. It is capped at a concentration of 1.2, probably to prevents exesive effects of the pahtogen.
+   
+   When the pathogen chemical levels surpasses 0.1 and the cell is not a pathogen (cell type 2), the wall stifness of the cell decreases (2.5 - chemical_level), weakening all the cell walls of the cell AND the function removes cell division restrictions (SetCellVeto(false))
+
+   For unnafected cells or if the cell is a pathogen (cell type 2), wall stiffness remains at 2.5 for all cell walls and the cell is restricted because of SetCellVeto(true).
+  
 
 ---
 
