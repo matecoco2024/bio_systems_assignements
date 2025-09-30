@@ -125,7 +125,7 @@ The cellHouseKeeping function simulates the 'housekeeping' functions for a cell.
 
 <img src="image-6.png" alt="diagram" style="width: 400px;">
 
-ill add a short desription later 
+As shown in the diagram, the pathogen releases a chemical (C(0)), this chemical then reduceses the cell wall stability of an infected cell. How this is done is described in the previous question. If the cell walls of a cell are weakened, and this cell shares a wall with a neighboring cell, more chemicals flow between these two cells (diffusion). So more C(0) is transported to the neighbouring cell. This can seen in the code, as the diffusion coefficient is inversely proportional to the wall stiffness (diffusionCoef = par->D[0] / stiffness;). 
 
 ---
 
