@@ -170,14 +170,48 @@ As shown in the diagram, the pathogen releases a chemical (C(0)), this chemical 
 
 ### Detection System
 [Pseudocode for chemical detection]
+for each cell :
+    if .Chemical(0)>threshold 
+        //cell detected pathogen chemical
+        c.defenseSignal=1
+    else
+        //no defensive response
+        c.defenceSignal=0
 
 ### Signal Transduction  
 [Pseudocode for defense signal propagation]
+for each cell c:
+    if c.defenceSignal ==1
+        for each neighbour n of c:
+            if .isInfected==false
+                //neighbour receives protection signal
+                n.strenghtenSignal =1
 
 ### Cell Wall Strengthening
 [Pseudocode for wall reinforcement mechanism]
+for each cell c:
+    if c.strengthenSignal == 1
+        // reinforce wall
+        c.cellWallStability += alpha
+        if c.cellWallStability > max_stability 
+            // cap at maximum
+            c.cellWallStability = max_stability   
+
+### Resistance to Infection
+for each cell c:
+    if c.isInfected == false
+        infection_probability = base_prob - beta * c.cellWallStability
+        // higher wall stability -> lower infection chance
 
 ### Integration with Existing Model
 [How to incorporate into current VirtualLeaf framework]
+
+1. CellHouseKeeping section - add detection of chemical (C(0)) and assignment of defenseSignal
+
+2. Cell-to-cell update loop - propagate strengthenSignal to neighbors
+
+3. Cell dynamics - adjust cellWallStability and recalculate infection probability
+
+4. Outcome - pathogen spread is slowed, and uninfected cells become more resistant over time
 ```
 
