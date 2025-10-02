@@ -170,8 +170,8 @@ As shown in the diagram, the pathogen releases a chemical (C(0)), this chemical 
 
 ### Detection System
 [Pseudocode for chemical detection]
-for each cell :
-    if .Chemical(0)>threshold 
+for each cell c :
+    if c.Chemical(0)>threshold 
         //cell detected pathogen chemical
         c.defenseSignal=1
     else
@@ -183,7 +183,7 @@ for each cell :
 for each cell c:
     if c.defenceSignal ==1
         for each neighbour n of c:
-            if .isInfected==false
+            if n.isInfected==false
                 //neighbour receives protection signal
                 n.strenghtenSignal =1
 
