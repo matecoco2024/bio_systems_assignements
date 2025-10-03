@@ -179,37 +179,21 @@ As shown in the diagram, the pathogen releases a chemical (C(0)), this chemical 
 - [ ] Describe changes in infection patterns
 - [ ] Explain biological significance of diffusion coefficient changes
 
+<img src="image-7.png" alt="comparison" style="width: 400px;">
+Comparison of t = 4h for each scenario.
 
-- When we compare the decreased diffusşion coefficient to the baseline scenario,
-the effects of diffusion changes are distinct. At low diffusion, the halo is 
-narrow (about 1–2 cell layers) with a steep drop in auxin/strength localized near 
-the pathogen. The interface appears patchy, with invasion occurring primarily along a few 
-weak junctions. This results in a smaller affected area and slower expansion at hour 4, 
-driven by deformation of immediate neighbors. Key visual cues include halo width 
-(narrow/steep vs broad/smooth), front roughness (jagged vs smooth). 
+- When we compare the decreased diffusion coefficient to the baseline scenario,
+the effects of diffusion changes are clear. At low diffusion, the total reach of the pathogen chemical is narrow (about 1–2 cell layers) with a steep drop in the chemical concentration compared to the baseline. This is because the low diffusion coeficient makes it harder for chemicals to travel between neighbouring cells. The lower levels of the pathogen chemical, result in stronger/more stable cell walls. This, in turn, results in a smaller affected area and slower expansion at hour 4 compared to the basline. The growth of the pathogen itself is slightly slower, however the final size at t4 is roughly the same. This is because the neigbouring cells of the pathogen, still have around the same concentration of the wall weakeining chemical compared to the baseline, allowing the pathogen to grow.
 
 
-- Meanwhile; higher levels of D generates a much broader halo, extending several cell layers 
-into the tissue with a smooth green/brown gradient rather than the tight, steep halo seen
-in baseline conditions. This pre-weakens more cells ahead of the physical front, so multiple
-neighboring files yield simultaneously. The pathogen outline becomes rounder and more
-symmetric, reflecting reduced differential pushback from specific walls. At hour 4, the 
-affected area is noticeably larger than baseline. Infection patterns also shift accordingly: 
-the front geometry becomes smoother and archy -rather than jagged, and the propagation 
-mode changes from neighbor-limited to a 'band-like' advance, as the chemical preconditions
-several layers. The halo gradient is broader and shallower, with occasional secondary 
-softening one or two cells beyond the main deformation zone. This results in faster 
-engagement of distant neighbors and greater front displacement within the same time frame.
+- Meanwhile, higher levels of D generates a much further reach of the pathogen chemical, 
+extending several cell layers into the tissue with a smooth green/brown gradient covering the entirety of the cell by hour 4. The chemical spreads considerably faster than in the baseline scenario. The high diffusion rate allows for easy and fast spread of the chemical. This results in high chemical concentrations. The high chemical concentrations then weaken the cell walls, allowing for even more diffusion to take place, creating a very fast and wide spread of the chemical. By hour 1 already more spread is observed than for the baseline in hour 4. The infection patterns is also different. The geometry of the spread becomes smoother/more linear, whereas in the baseline different cells are at different concentration levels of the chemical, as shown by the different shades of brown, resulting in a more jagged spread. 
 
-
-- Biologically speaking; altering diffusion affects transport length and front speed,
-with higher D producing larger characteristic lentgh, faster invasion, and smoother fronts, while 
+- Biologically speaking, altering diffusion affects transport length/reach and spreading speed,
+with higher D producing further reach, faster invasion, and smoother infection patterns, while 
 lower D confines weakening locally, making spread slower and patchier. High D distributes 
 the chemical broadly, lowering wall stiffness across a wider zone and enabling uniform 
-invasion, whereas low D maintains stiffness except near the pathogen, creating anisotropic 
-spread. Ultimately, if pathogen growth dominates, endpoint infection levels may be similar,
-with D mainly determining the timing and smoothness of invasion.
----
+invasion, whereas low D maintains wall stiffness except near the pathogen. In the end, if the pathogen keeps growing, the total amount of infection may be about the same, but the diffusion rate mainly controls how quickly and how evenly the invasion spreads.
 
 ### 5. Plant Defense Mechanism Design
 **Objective**: Design a computational model for plant immune response
