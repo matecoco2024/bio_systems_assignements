@@ -138,16 +138,77 @@ As shown in the diagram, the pathogen releases a chemical (C(0)), this chemical 
   - Document with screenshots (t = 0, 1, 2, 3, 4h)
   - Record observations
   
+### **t = 0h** 
+<img src="t0_diffusion_decrease.png" alt="hour0_dec" style="width: 400px;">
+
+### **t = 1h**
+<img src="t1_diffusion_decrease.png" alt="hour1_dec" style="width: 400px;">
+
+### **t = 2h**
+<img src="t2_diffusion_decrease.png" alt="hour2_dec" style="width: 400px;">
+
+### **t = 3h**
+<img src="t3_diffusion_decrease.png" alt="hour3-dec" style="width: 400px;">
+
+### **t = 4h**
+<img src="t4_diffuison_decrease.png" alt="hour4_dec" style="width: 400px;">
+
+
 - [ ] **Experiment B**: Increase pathogen chemical diffusion coefficient by **factor of 10** 
   - Run simulation for 4h  
   - Document with screenshots (t = 0, 1, 2, 3, 4h)
   - Record observations
+
+### **t = 0h** 
+<img src="t0_diffusion_increase.png" alt="hour0_inc" style="width: 400px;">
+
+### **t = 1h** 
+<img src="t1_diffusion_increae.png" alt="hour1_inc" style="width: 400px;">
+
+### **t = 2h** 
+<img src="t2_diffusion_increase.png" alt="hour2_inc" style="width: 400px;">
+
+### **t = 3h** 
+<img src="t3_diffusion_increase.png" alt="hour3_inc" style="width: 400px;">
+
+### **t = 4h** 
+<img src="t4_difusion_increase.png" alt="hour4_inc" style="width: 400px;">
 
 **Analysis**:
 - [ ] Compare results to baseline simulation
 - [ ] Describe changes in infection patterns
 - [ ] Explain biological significance of diffusion coefficient changes
 
+
+- When we compare the decreased diffusşion coefficient to the baseline scenario,
+the effects of diffusion changes are distinct. At low diffusion, the halo is 
+narrow (about 1–2 cell layers) with a steep drop in auxin/strength localized near 
+the pathogen. The interface appears patchy, with invasion occurring primarily along a few 
+weak junctions. This results in a smaller affected area and slower expansion at hour 4, 
+driven by deformation of immediate neighbors. Key visual cues include halo width 
+(narrow/steep vs broad/smooth), front roughness (jagged vs smooth). 
+
+
+- Meanwhile; higher levels of D generates a much broader halo, extending several cell layers 
+into the tissue with a smooth green/brown gradient rather than the tight, steep halo seen
+in baseline conditions. This pre-weakens more cells ahead of the physical front, so multiple
+neighboring files yield simultaneously. The pathogen outline becomes rounder and more
+symmetric, reflecting reduced differential pushback from specific walls. At hour 4, the 
+affected area is noticeably larger than baseline. Infection patterns also shift accordingly: 
+the front geometry becomes smoother and archy -rather than jagged, and the propagation 
+mode changes from neighbor-limited to a 'band-like' advance, as the chemical preconditions
+several layers. The halo gradient is broader and shallower, with occasional secondary 
+softening one or two cells beyond the main deformation zone. This results in faster 
+engagement of distant neighbors and greater front displacement within the same time frame.
+
+
+- Biologically speaking; altering diffusion affects transport length and front speed,
+with higher D producing larger characteristic lentgh, faster invasion, and smoother fronts, while 
+lower D confines weakening locally, making spread slower and patchier. High D distributes 
+the chemical broadly, lowering wall stiffness across a wider zone and enabling uniform 
+invasion, whereas low D maintains stiffness except near the pathogen, creating anisotropic 
+spread. Ultimately, if pathogen growth dominates, endpoint infection levels may be similar,
+with D mainly determining the timing and smoothness of invasion.
 ---
 
 ### 5. Plant Defense Mechanism Design
